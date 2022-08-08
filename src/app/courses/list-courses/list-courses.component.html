@@ -1,0 +1,66 @@
+<app-side-nav class="side"></app-side-nav>
+<app-side-nav class="side"></app-side-nav>
+<span class="group flex flex-col table-container">
+    <div class="st">
+        Courses<picture>
+            <source media="(min-width: )" srcset="">
+            <img src="" alt="">
+        </picture>
+    </div>
+    <mat-form-field class="field" appearance="fill">
+        <mat-label>Order By ID</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let order of orders" [value]="order" (click)="selectOrder(order)">
+                {{order}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 mx-auto my-auto">
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let course"> {{course.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let course"> {{course.name}} </td>
+        </ng-container>
+        <ng-container matColumnDef="duration">
+            <th mat-header-cell *matHeaderCellDef> Duration </th>
+            <td mat-cell *matCellDef="let course"> {{course.duration}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="teacherId">
+            <th mat-header-cell *matHeaderCellDef> Teacher ID </th>
+            <td mat-cell *matCellDef="let course"> {{course.teacherId}} </td>
+        </ng-container>
+        <ng-container matColumnDef="teacher">
+            <th mat-header-cell *matHeaderCellDef>Teacher </th>
+            <td mat-cell *matCellDef="let course">{{course.teacher}}</td>
+        </ng-container>
+        <ng-container matColumnDef="operation">
+            <th mat-header-cell *matHeaderCellDef>Operation </th>
+            <td mat-cell *matCellDef="let course" (click)="delete(course.id)"><button>DELETE</button></td>
+        </ng-container>
+        <ng-container matColumnDef="select">
+            <th mat-header-cell *matHeaderCellDef> Assign </th>
+            
+                <td mat-cell *matCellDef="let course"> 
+                    <mat-select>
+                    <mat-option *ngFor="let teacher of teachers" [value]="teacher.name" (click)="assignTeacher(course.id,teacher.id)">
+                        {{teacher.name}}
+                    </mat-option>
+                </mat-select>
+            </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator 
+    [length]="totalElements" 
+    [pageIndex]="page" 
+    [pageSize]="size" 
+    [pageSizeOptions]="[5,10,25]"
+    (page)="pageChanged($event)" aria-label="Select page">
+    </mat-paginator>
+</span>

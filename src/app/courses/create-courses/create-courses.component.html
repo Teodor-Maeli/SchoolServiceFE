@@ -1,0 +1,13 @@
+<app-side-nav class="side"></app-side-nav>
+<div class="group flex flex-col table-container">
+    <div class="st">Add a course<picture>
+            <source media="(min-width:)" srcset="">
+            <img src="" alt="">
+        </picture>
+    </div>
+    <form class="form"[formGroup]="creationForm" (ngSubmit)="sendRequest()">
+        <input type="text" placeholder="NAME"formControlName="name">
+        <input type="text" placeholder="DURATION"formControlName="duration">
+        <input type="submit" class="p-2 w-full submit" value="SUBMIT">
+    </form>
+</div>

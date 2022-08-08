@@ -1,1 +1,130 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-image: linear-gradient(#1c0001, #280001, #370001, #480002, #550002, #660002, #790003, #800003, #9f0004, #c10005, #c92a2a);
+}
+
+.st {
+  width: 50%;
+  text-align: center;
+  position: relative;
+  margin-bottom: 10%;
+  left: 25%;
+  right: 25%;
+  top: 12%;
+  text-transform: uppercase;
+  font-size: 250%;
+  font-family: 'ITC Benguiat W01';
+  font-weight: 800;
+
+  color: #1c0502;
+  text-shadow: -0.05rem -0.05rem 1px #ed2b12,
+    0.05rem -0.05rem 1px #ed2b12,
+    -0.05rem 0.05rem 1px #ed2b12,
+    0.05rem 0.05rem 1px #ed2b12,
+    0 0 15px #630100,
+    0 0 20px #450100;
+  letter-spacing: -2px;
+}
+
+input {
+ position: relative;
+ left: 0%;
+ width: 100%;
+  margin-top: 10px;
+  color: red;
+  border: 2px solid red;
+  padding: 2px 5px;
+  font-size: 15px;
+  font-family: tahoma;
+  letter-spacing: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  filter: drop-shadow(0 0 5px red) drop-shadow(0 0 20px red) contrast(2) brightness(2);
+
+}
+
+::placeholder {
+  background-color: black;
+  text-align: center;
+  color: #5A0004 !important;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  text-align: center;
+  color: red;
+}
+
+::-ms-input-placeholder {
+
+  text-align: center;
+  color: red !;
+}
+
+.submit {
+  margin-top: 30px !important;
+  background-color: #9B1B30;
+  color: #28333f;
+  border: 2px solid #28333f;
+  width: 100%;
+
+}
+input:hover {
+  color: #001F3F !important;
+  background-color: #660002 !important;
+}
+
+button:hover {
+  color: #001F3F!important;
+  background-color: #ff6eb4!important;
+}
+
+mat-paginator{
+  position:relative;
+  width: 100%;
+  bottom: 0;
+  background-color: #9B1B30!important;
+  color: white!important;
+  
+}
+
+.table-container {
+  position: relative;
+  width: 50%;
+  left:25.5%;
+  top:20%;
+  
+}
+
+table {
+  width:100%!important;
+}
+
+.field {
+
+  position: relative;
+  width: 100%;
+  background-color: #9B1B30;
+  border:1px solid #28333f;
+}
+
+mat-label {
+  color:white
+}
+
+
+

@@ -23,10 +23,12 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
           },
+          
           "configurations": {
             "production": {
               "budgets": [
@@ -65,9 +67,11 @@
           "configurations": {
             "production": {
               "browserTarget": "StudentManagement_FE:build:production"
+              
             },
             "development": {
               "browserTarget": "StudentManagement_FE:build:development"
+        
             }
           },
           "defaultConfiguration": "development"
@@ -90,6 +94,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
