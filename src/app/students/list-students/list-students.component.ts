@@ -35,7 +35,6 @@ export class ListStudentsComponent implements OnInit {
       setTimeout(() => {
         this.dataSource = result.content;
         this.totalElements = result.totalElements;
-        this.size = result.size;
       },100);
 
     });

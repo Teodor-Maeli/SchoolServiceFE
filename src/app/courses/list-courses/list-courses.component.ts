@@ -36,7 +36,6 @@ export class ListCoursesComponent implements OnInit {
   getAll() {
     this.coursesService.getAll(this.page,this.size,this.order).subscribe(result => {
       this.dataSource = result.content
-       this.dataSource = result.content;
         this.totalElements = result.totalElements;
     })
   }

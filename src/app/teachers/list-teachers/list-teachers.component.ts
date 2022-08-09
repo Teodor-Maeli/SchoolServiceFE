@@ -40,7 +40,6 @@ export class ListTeachersComponent implements OnInit {
     this.teacherService.getAll(this.page, this.size,this.order).subscribe(
       data => {
         setTimeout(()=>{
-          this.dataSource.data = data.content
           this.dataSource = data.content;
           this.totalElements = data.totalElements;
 
