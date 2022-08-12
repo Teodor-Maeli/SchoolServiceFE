@@ -1,6 +1,7 @@
 table {
     width: 50%;
     height: 50%;
+    
 }
 
 th,
@@ -12,10 +13,10 @@ td {
     padding-right: 5px !important;
     font-family: sans-serif !important;
     font-style: italic;
-    color: white;
     text-align: center!important;
     padding-left: 0px!important;
     padding-right: 0px!important;
+
 
 }
 
@@ -30,10 +31,12 @@ td {
 
 tr:nth-child(even) {
     background-color: #343a40 !important;
+    
 }
 
 tr:nth-child(odd) {
     background-color: #4c566a !important;
+    
 }
 
 

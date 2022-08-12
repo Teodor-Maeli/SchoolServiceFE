@@ -20,7 +20,8 @@ import { ListCoursesComponent } from './courses/list-courses/list-courses.compon
 import { CreateCoursesComponent } from './courses/create-courses/create-courses.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import {MatSelectModule} from '@angular/material/select'; 
+import {MatSelectModule} from '@angular/material/select';
+
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import {MatSelectModule} from '@angular/material/select';
     CreateEnrollmentsComponent,
     ListEnrollmentsComponent,
     ListCoursesComponent,
-    CreateCoursesComponent
+    CreateCoursesComponent,
+
 
  
 
